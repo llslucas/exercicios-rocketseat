@@ -1,0 +1,95 @@
+body{
+    background: #2C2B3D;
+    margin: 0;
+    color: white;
+}
+
+div.container{
+    width: 1080px;
+    margin: 75px auto 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    gap: 64px;        
+    list-style: none;    
+    font-family: JetBrains Mono;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; 
+}
+
+a{
+    text-decoration: none;    
+    color:white;
+}
+
+a:hover{
+    font-weight: 700;
+    color:#00BFA6;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 101px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 610px;    
+}
+
+section h1{
+    font-family: JetBrains Mono;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+section span{
+    color: #00BFA6;
+}
+
+section p{
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+footer{
+    text-align: center;
+}
+
+footer div{
+    width: 568.001px;
+    height: 0px;
+    border: 1px solid #00BFA6;
+    margin: 157px auto 0;
+}
+
+footer p{
+    font-family: JetBrains Mono;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+img.canto{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
