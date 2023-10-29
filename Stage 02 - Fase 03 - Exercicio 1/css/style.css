@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before{
+    content: '';
+    height: 368px;
+    width: 100%;
+    background: #121214;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body{
+    background: #D9D9D9;   
+    color: white; 
+}
+
+.container{
+    width: 736px;
+    margin: 80px auto 0;    
+}
+
+header{
+    width: 320px;
+}
+
+header h1{
+    font-family: Archivo;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+}
+
+header p{
+    color: #42D3FF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 24px;
+}
+
+main{
+    margin-top: 42px;    
+    margin-bottom: 91px;
+}
+
+#section-form{   
+    padding: 64px;    
+    background: #FAFAFC;
+    border-radius: 8px 8px 0px 0px;    
+    color: black;   
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 48px
+}
+
+fieldset{
+    border: none;  
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset legend{
+    color: #32264D;
+    font-family: Archivo;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    width: 100%;
+    border-bottom: 1px solid #E6E6F0;
+    padding-bottom: 16px;
+}
+
+.input-wrapper{
+    margin-top: 24px;
+    position: relative;
+}
+
+.input-wrapper label{
+    color: #4E4958;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+.input-wrapper span{
+    color: #847d92;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px; 
+    margin-left: 12px;
+}
+
+.input-wrapper input{
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #b1abbe;
+    margin-top: 8px;
+    padding-left: 24px;
+
+    color: #787383;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.input-wrapper textarea{
+    width: 100%;
+    height: 168px;
+    border-radius: 8px;
+    border: 1px solid #b1abbe;
+    margin-top: 8px;
+    padding-left: 24px;
+    padding-top: 12px;
+
+    color: #787383;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.input-wrapper select{
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #b1abbe;
+    margin-top: 8px;
+    padding-left: 24px;
+
+    color: #787383;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
+    appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 560px;
+}
+
+.checkbox-wrapper{
+    margin-top: 24px;
+    position: relative;    
+}
+
+.checkbox-wrapper input{
+    opacity: 0;
+    position: absolute;      
+}
+
+.checkbox-wrapper label{
+    color: #4E4958;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; 
+
+    display: flex;  
+    align-items: center;
+    gap: 16px;
+}
+
+.checkbox-wrapper label::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    border-radius: 8px;
+    border: 1px solid #b1abbe;    
+}
+
+.input-wrapper input:focus, .input-wrapper selection:focus, .input-wrapper textarea:focus, .checkbox-wrapper input:focus + label::before{
+    outline: 2px solid #54515a;
+}
+
+.checkbox-wrapper input:checked + label::before{
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cg clip-path='url(%23clip0_2607_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2607_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");   
+}
+
+.col-3{
+    display: flex;
+    gap: 20px;    
+}
+
+.col-3 > .input-wrapper:nth-child(1){
+    width: 100%;
+}
+
+section#form-submit{
+    width: 736px;
+    height: 136px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 0px 8px 8px;
+    background: #F0F0F4;
+}
+
+#form-submit button{
+    width: 608px;
+    height: 56px;
+    padding: 15px 40px;
+
+    border: none;
+    border-radius: 8px;
+    background: #04D361;
+
+    color:white;
+    font-family: Archivo;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px; 
+
+    cursor: pointer;
+}
+
+#form-submit button:hover{
+    background-color: #008d3f;
+}
+
+
+
+
+
+
