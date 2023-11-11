@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Fórmulário - 2</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mentoria</h1>
+            <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
+        </header>
+        <main>            
+            <form id="formulario">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name">                        
+                        </div> 
+
+                        <div class="input-wrapper">
+                            <label for="last-name">Sobrenome</label>
+                            <input type="text" id="last-name">
+                        </div>    
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="mail">Email</label>
+                        <span>(digite um email válido)</span>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="senha">Senha</label>
+                        <span>(mínimo de 6 caracteres)</span>
+                        <input type="password" id="senha">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações do mentor</legend>
+                    <div class="input-wrapper">
+                        <label for="mentor-name">Nome do seu mentor</label>
+                        <span>(Só o primeiro nome)</span>
+                        <input type="text" id="mentor-name">                    
+                    </div>   
+                </fieldset>
+
+                <fieldset>
+                    <legend>Seus horários disponíveis</legend>
+                    <p>Primeira Mentoria</p>
+
+                    <div class="input-group col-3">
+                        <div class="input-wrapper">                        
+                            <label for="name">Data</label>
+                            <span>(DD/MM/AAA)</span>
+                            <input type="date">                        
+                        </div>
+
+                        <div class="input-wrapper">  
+                            <label for="name">Das</label>
+                            <input type="time">
+                        </div>
+
+                        <div class="input-wrapper">  
+                            <label for="name">Até</label>
+                            <input type="time">
+                        </div>
+                    </div>
+
+                    <p>Segunda Mentoria</p>
+
+                    <div class="input-group col-3">
+                        <div class="input-wrapper">                        
+                            <label for="name">Data</label>
+                            <span>(DD/MM/AAA)</span>
+                            <input type="date">                        
+                        </div>
+
+                        <div class="input-wrapper">  
+                            <label for="name">Das</label>
+                            <input type="time">
+                        </div>
+
+                        <div class="input-wrapper">  
+                            <label for="name">Até</label>
+                            <input type="time">
+                        </div>
+                    </div>  
+                </fieldset>
+            </form>      
+            
+            <div class="container-button">
+                <input type="submit" form="formulario" value="Salvar"/>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
