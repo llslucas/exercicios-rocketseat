@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%; 
+}
+
+body{    
+    padding: 50px 35px; 
+    font-family: 'Source Serif 4', sans-serif;
+    color: #A54328;  
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 310px;
+    margin: auto;
+    gap: 34px;
+}
+
+main > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.intro{
+    gap: 47px;
+}
+
+img{
+    width: 100%;
+}
+
+h1{         
+    font-size: 2.9rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+p, li, strong{
+    font-size: 1.5rem;
+    font-weight: 400; 
+}
+
+strong{
+    margin-top: 16px;
+    font-weight: 700;
+}
+
+ul, ol{
+    margin-left: 30px;
+}
+
+button{
+    color: white;
+
+    width: 95px;
+    height: 32px;   
+    border-radius: 5.669px;
+    border: none;
+    background: #A54328;
+
+    text-align: center;
+    font-family: 'Source Serif 4';
+    font-size: 1rem;
+    font-weight: 400;  
+
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #e75e39;
+}
+
+@media (min-width: 1024px){
+    body{        
+        background: url(Assets/bg.png), lightgray 50% / cover no-repeat;
+    }
+
+    main{
+        flex-direction: row;
+        max-width: fit-content;
+        gap: 150px;
+    }
+
+    main > div{
+        max-width: 525px;
+        flex: 1;
+    }
+
+    img{
+        max-width: 410px;
+    }
+}
+
