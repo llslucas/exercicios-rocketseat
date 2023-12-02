@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --color-white: #FFF;
+    --color-blue-main: #065E7C;
+    --color-gray-100: #F4FCFF;
+    --color-input: rgba(255, 255, 255, 0.20)
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--color-gray-100);
+}
+
+html, body, input{
+    font-family: Mulish;
+}
+
+#app{
+    display: grid;
+    height: 100vh;  
+    grid-template-rows: max-content 1fr max-content;
+}
+.container{
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+header{
+    background-color: var(--color-blue-main); 
+    padding: 16px;    
+}
+
+header > .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+header .logo{
+    background-color: var(--color-gray-100);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+#form-pesquisa{
+    flex: 1;    
+}
+
+#form-pesquisa label{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;    
+    position: absolute;
+}
+
+#form-pesquisa input{
+    width: 100%;
+    background-color: var(--color-input);
+    color: var(--color-white);
+    border: none;    
+    padding: 12px 16px 12px 14px;    
+    border-radius: 4px;    
+}
+
+#form-pesquisa input::placeholder{
+    color: var(--color-white);
+}
+
+header .avatar{
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+main{
+    overflow-y: scroll;
+}
+
+main .container{
+    display: grid;      
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+    padding: 45px 0;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section .capa{    
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+section .titulo {
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;    
+    padding: 16px 0;
+}
+
+.titulo h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.titulo .avaliacao{
+    display: flex;
+    gap: 12px;
+}
+
+.avaliacao img{
+    background-color: var(--color-blue-main);
+    padding: 12px;
+    border-radius: 50%;
+    
+}
+
+section .texto{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+section p{
+    font-weight: 400;
+    line-height: 160%;        
+}
+
+aside{       
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+aside h2{
+    font-size: 2.4rem;
+    font-weight: 700;         
+}
+
+aside .artigo{
+    display: grid;
+    grid-template-areas: 
+        "A B"
+        "A C";      
+    grid-template-columns: 1fr 1.618fr;
+    gap: 8px 16px;
+}
+
+.artigo > img{
+    grid-area: A;    
+    width: 100%;    
+    max-height: 130px;
+    aspect-ratio: 14/9;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.artigo > h3{
+    grid-area: B; 
+    font-size: 1.8rem;
+    font-weight: 700;    
+}
+
+.artigo > p{
+    grid-area: C; 
+    font-size: 1.4rem;
+    line-height: 140%;
+}
+
+footer{ 
+    text-align: center;
+    background-color: var(--color-blue-main);
+    color: var(--color-white);
+    padding: 16px;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px){
+    main{
+        padding: 24px;
+    }
+}
+
+@media (max-width: 1024px){    
+    main .container{
+        grid-template-columns: 1fr;       
+    }    
+
+    section .titulo{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    section .texto{
+        padding: 24px;
+    }
+
+    aside{
+        padding: 24px;
+    }
+}
