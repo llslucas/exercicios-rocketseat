@@ -23,7 +23,7 @@ function toogleTela(){
 
 biscoitoFechado.addEventListener('click', event =>{
     toogleTela();
-    let luckNumber = Math.floor(Math.random() * 9);
+    let luckNumber = Math.floor(Math.random() * 10);
     paragrafoSorte.textContent = arraySorte[luckNumber];
     console.log(luckNumber);
 })
