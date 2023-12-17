@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    background: linear-gradient(-45deg, #190361 0%, #B0F 100%);
+    background-size: 200% 200%;
+    animation: bg 5s ease-in infinite;
+    font-size: 1.6rem;    
+    height: 100vh;
+    display: grid;
+}
+
+.tela-1{
+    background: #FFF;
+    width: 428px;
+    height: 428px;
+    padding: 48px 64px 64px 64px;    
+    border-radius: 5px;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    margin-top: -4%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.tela-2{
+    background: #FFF;
+    width: 428px;
+    padding: 48px 64px;    
+    border-radius: 5px;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    margin-top: -4%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    align-items: center;    
+}
+
+.hide{    
+    display: none;
+}
+
+h1{
+    color: #34355B;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-weight: 700;  
+}
+
+h2{
+    font-family: DM Sans;
+    font-size: 1.5rem; 
+    font-weight: 400;
+}
+
+.container-sorte{
+    animation: mostra-sorte 0.5s ease-in;
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: 10px;    
+}
+
+#sorte{
+    font-family: 'Dancing Script';
+    font-size: 2.4rem;    
+}
+
+#biscoito-fechado{
+    max-width: 250px;
+    height: auto;    
+    margin-top: 10px;
+}
+
+#biscoito-fechado:hover{
+    animation: treme-biscoito 0.2s ;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+button{
+    padding: 16px;
+    border-radius: 4px;
+    background: #FF9500;
+    border: none;
+
+    color: #FFF;
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+button:hover{
+    cursor: pointer;
+    background: #e98800;
+}
+
+@keyframes bg {
+    0%{        
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes treme-biscoito {
+    0%{
+        transform: translate(5px);
+    }
+
+    50%{
+        transform: translate(-5px);
+    }
+}
+
+@keyframes mostra-sorte {
+    0%{
+        transform: translateY(150px) scale(20%);
+    }
+}
