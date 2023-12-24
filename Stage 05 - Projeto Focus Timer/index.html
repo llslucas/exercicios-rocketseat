@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="assets/ph-pause-circle.svg" type="image/x-svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Focus Timer</title>
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>    
+    <button id="toogleMode">        
+        <span class="sr-only">Alternar para Modo Escuro</span>
+        <i class="ph-bold ph-moon"></i>
+        <i class="ph-bold ph-sun"></i>
+    </button>
+
+    <div id="app">       
+
+        <section id="timer" class="flex">
+            <span id="minutos">00</span>
+            <span>:</span>
+            <span id="segundos">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+            <!-- Mostra Caso Timer não esteja rodando -->
+            <button data-action="toogleRunning" id="button-play" class="ph ph-play-circle primary">
+                <span class="sr-only">Acionar Timer</span>
+            </button>
+            <button data-action="set" id="button-timer" class="ph ph-timer">
+                <span class="sr-only">Alterar Timer</span>
+            </button>
+
+            <!-- Mostra Caso Timer esteja rodando -->
+            <button data-action="toogleRunning" id="button-pause" class="ph ph-pause-circle primary">
+                <span class="sr-only">Pausar Timer</span>
+            </button>
+            <button data-action="reset" id="button-stop" class="ph ph-stop-circle">
+                <span class="sr-only">Reiniciar Timer</span>
+            </button>
+
+            <!-- Botões de Música -->
+            <button  data-action="toogleMusic" id="button-speaker-none" class="ph ph-speaker-none">
+                <span class="sr-only">Ligar Música</span>
+            </button>
+            <button data-action="toogleMusic" id="button-speaker-high" class="ph ph-speaker-high primary">
+                <span class="sr-only">Desligar Música</span>
+            </button>
+        </section>
+    </div>
+</body>
+</html>
