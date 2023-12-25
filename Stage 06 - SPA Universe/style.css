@@ -14,12 +14,26 @@
 
 body{    
     height: 100vh;
-    background-image: url("./assets/mountains-universe-1.png");
+    
     background-size: cover;
     padding: 4rem 7.2rem;
 
     display: grid;
     grid-template-rows: min-content 1fr;
+
+    transition: 1s;
+}
+
+html[data-route="/"] body{
+    background-image: url("./assets/mountains-universe-1.png");
+}
+
+html[data-route="/universo"] body{
+    background-image: url("./assets/mountains-universe-2.png");
+}
+
+html[data-route="/explore"] body{
+    background-image: url("./assets/mountains-universe-3.png");
 }
 
 html, body, input{

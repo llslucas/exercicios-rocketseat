@@ -16,6 +16,8 @@ export class Router{
         fetch(route)
             .then(data => data.text())
             .then(text => app.innerHTML = text);     
+
+        document.documentElement.dataset.route = pathname;
         
         document.querySelector('a.active').classList.remove('active');
         document.querySelector(`a[href="${pathname}"]`).classList.add('active');
