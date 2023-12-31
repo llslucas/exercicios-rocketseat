@@ -4,6 +4,6 @@
 
 📝 Já tinha um conhecimento prévio sobre os temas ensinados na formação, mas acho interessante rever o tema através de novos pontos de vista.
 
-📌 Atualmente estou no Stage 7.
+📌 Atualmente estou no Stage 8.
 
 🗺️ Meta para Finalizar: 31/01/2024.
