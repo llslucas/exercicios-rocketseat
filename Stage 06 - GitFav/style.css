@@ -117,22 +117,25 @@ html, body, input, button{
 main{
     border: var(--table-border);
     border-radius: 10px;
-    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 60vh;     
 }
 
 table{  
     width: 100%;         
     border-collapse: collapse;       
-    font-size: 2rem;        
+    font-size: 2rem;     
 }
 
 thead{           
-    background-color: var(--color-primary-200);                     
+    background-color: var(--color-primary-200);       
+    position: sticky;
+    top: 0;             
 }
 
 thead th{
     padding: 1.6rem 4rem;     
-    text-align: left;   
+    text-align: left;       
 }
 
 tbody{              
@@ -191,4 +194,19 @@ p.delete:hover{
     display: flex;
     flex-direction: column;    
     gap: .3rem;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {      
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {    
+    background: var(--color-primary-100);
+    border-radius: 1rem;   
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-0);   
 }
