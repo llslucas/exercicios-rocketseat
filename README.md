@@ -6,4 +6,6 @@
 
 📌 Atualmente estou no Stage 8.
 
+🤯 Eu vendo as aulas sobre Node JS.
+
 🗺️ Meta para Finalizar: 31/01/2024.
