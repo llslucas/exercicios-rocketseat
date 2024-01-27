@@ -2,7 +2,7 @@ import 'express-async-errors';
 import AppError from './utils/AppError.js';
 import express from 'express';
 import routes from './routes/index.js';
-import migrationRun from './database/migrations/index.js';
+import migrationRun from './database/sqlite/migrations/index.js';
 
 const app = express();
 
