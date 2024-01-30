@@ -11,8 +11,8 @@ export function up(knex) {
 
     table.integer('user_id').references('id').inTable('users');
 
-    table.dateTime('created_at');
-    table.dateTime('updated_at');
+    table.dateTime('created_at').defaultTo(knex.fn.now());
+    table.dateTime('updated_at').defaultTo(knex.fn.now());
   })
 };
 
