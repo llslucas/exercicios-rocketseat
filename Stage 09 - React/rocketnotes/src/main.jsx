@@ -11,7 +11,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
       <Details />     
-      <Button />
+      <Button title="Entrar" />
+      <Button title="Cadastrar"/>
+      <Button title="Voltar"/>
     </ThemeProvider>
   </React.StrictMode>,
 )
