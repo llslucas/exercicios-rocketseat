@@ -8,7 +8,12 @@ export const Container = styled.div`
     grid-template-rows: 106px auto;
     grid-template-areas:
     "header"
-    "content"
+    "content";
+
+    > main{
+        grid-area: "content";      
+        overflow-y: auto;
+    }
 `;
 
 export const Links = styled.ul`
@@ -22,4 +27,29 @@ export const Links = styled.ul`
             text-decoration: none;
         }
     }    
+`;
+
+export const Content = styled.div`
+    max-width: 560px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;   
+
+    > button:first-child{
+        place-self: end;     
+        margin: 60px 0;   
+    }
+
+    > h1{
+        font-size: 36px; 
+        font-weight: 500;
+    }
+
+    > p{
+        text-align: justify;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 16px;
+    }
 `;
