@@ -1,7 +1,10 @@
 import { Container } from "./styles";
 
-export function Input({title}){
+export function Input({icon: Icon, ...rest}){
     return (
-        <Container type="text" placeholder={title} />           
+        <Container>
+            {Icon && <Icon size={'20px'} />}
+            <input {...rest} />
+        </Container>           
     )
 }

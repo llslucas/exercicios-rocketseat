@@ -3,7 +3,7 @@ import { Header } from '../../components/Header'
 import { ButtonText } from '../../components/ButtonText'
 import { Input } from '../../components/Input'
 import { Section } from '../../components/Section'
-import { MdAdd } from 'react-icons/md'
+import { MdAdd, MdSearch } from 'react-icons/md'
 
 export function Home(){
     return (
@@ -21,7 +21,7 @@ export function Home(){
             </Menu>
 
             <Search>
-                <Input title="Pesquisar pelo titulo" />
+                <Input placeholder="Pesquisar pelo titulo" icon={MdSearch} />
             </Search>            
 
             <NewNote>                
