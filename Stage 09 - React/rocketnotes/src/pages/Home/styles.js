@@ -28,11 +28,22 @@ export const Brand = styled.div`
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    > h2 {
+        font-size: 24px;
+    }
 `;
 
 export const Menu = styled.ul`
     grid-area: menu;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    padding-top: 64px;
+    text-align: center;
+
+    > li {
+        margin-bottom: 24px;
+    }
     
 `;
 
@@ -56,11 +67,20 @@ export const NewNote = styled.button`
 
     background: ${({ theme }) => theme.COLORS.ORANGE};
     border: none;
-
+    
     font-size: 20px;
+
+    cursor: pointer;
+
+    transition: filter 0.2s;  
+
+    &:hover {
+        filter: brightness(1.2);              
+    };
 
     > svg{
         margin-right: 8px;
         font-size: 24px;
-    }
+    };
 `;
+    
