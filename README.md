@@ -4,8 +4,6 @@
 
 📝 Já tinha um conhecimento prévio sobre os temas ensinados na formação, mas acho interessante rever o tema através de novos pontos de vista.
 
-📌 Atualmente estou no Stage 8.
+📌 Atualmente estou no Stage 9.
 
-🤯 Eu vendo as aulas sobre Node JS.
-
-🗺️ Meta para Finalizar: 31/01/2024.
+🗺️ Meta para Finalizar: 31/02/2024.
