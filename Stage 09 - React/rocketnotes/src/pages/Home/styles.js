@@ -49,8 +49,8 @@ export const Menu = styled.ul`
 
 export const Search = styled.div`
     grid-area: search;
-    padding: 64px;
-
+    padding: 64px;   
+    
     > input {
         font-size: 14px;
     }
@@ -58,7 +58,7 @@ export const Search = styled.div`
 
 export const Content = styled.div`
     grid-area: content;
-    
+    padding: 36px 64px;    
 `;
 
 export const NewNote = styled.button`
