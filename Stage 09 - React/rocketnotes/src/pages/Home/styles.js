@@ -49,7 +49,11 @@ export const Menu = styled.ul`
 
 export const Search = styled.div`
     grid-area: search;
-    
+    padding: 64px;
+
+    > input {
+        font-size: 14px;
+    }
 `;
 
 export const Content = styled.div`

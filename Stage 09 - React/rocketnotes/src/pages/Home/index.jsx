@@ -1,6 +1,8 @@
 import { Container, Brand, Menu, Search, Content, NewNote } from './styles'
 import { Header } from '../../components/Header'
 import { ButtonText } from '../../components/ButtonText'
+import { Input } from '../../components/Input'
+import { Section } from '../../components/Section'
 import { MdAdd } from 'react-icons/md'
 
 export function Home(){
@@ -19,7 +21,7 @@ export function Home(){
             </Menu>
 
             <Search>
-
+                <Input title="Pesquisar pelo titulo" />
             </Search>            
 
             <NewNote>                
@@ -28,7 +30,9 @@ export function Home(){
             </NewNote>   
 
             <Content>
-                
+                <Section title="Minhas Notas">
+                    
+                </Section>
             </Content>  
         </Container>
     )
