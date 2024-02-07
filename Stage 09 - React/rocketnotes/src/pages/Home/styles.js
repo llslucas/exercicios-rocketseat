@@ -54,7 +54,18 @@ export const Search = styled.div`
 
 export const Content = styled.div`
     grid-area: content;
-    padding: 36px 64px;    
+    padding: 36px 64px;       
+    overflow-y: auto;
+    
+    > section {
+        display: flex;
+        flex-direction: column;
+        
+
+        > div {
+            margin-bottom: 16px;
+        }
+    }
 `;
 
 export const NewNote = styled.button`
