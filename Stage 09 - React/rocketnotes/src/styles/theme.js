@@ -11,5 +11,8 @@ export default {
       GRAY_300: "#666360",
   
       RED: "#FF002E"
+    },
+    IMAGES:{
+      BACKGROUND: "./src/assets/BG.jpeg"
     }
   }
