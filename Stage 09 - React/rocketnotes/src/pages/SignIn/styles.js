@@ -17,6 +17,7 @@ export const DataContainer = styled.div`
 export const ImgContainer = styled.div`
     background-image: url(${({ theme }) => theme.IMAGES.BACKGROUND});
     background-size: cover;
+    opacity: 0.5;
 `;
 
 export const Form = styled.form`
