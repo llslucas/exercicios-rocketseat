@@ -9,13 +9,12 @@ export const Container = styled.div`
     border-radius: 10px;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
-    >input {        
+    >TextArea {        
         background: transparent;
         color: ${({ theme }) => theme.COLORS.WHITE};
 
         width: 100%;
-        padding: 16px 20px;    
-        
+        padding: 16px 20px;   
         border: none;
 
         font-size: 14px;
