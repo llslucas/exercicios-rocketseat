@@ -23,6 +23,11 @@ export const Container = styled.div`
         }
     }
 
+    > button {
+        background: none;
+        border: none;
+    }
+
     svg{
         color: ${({ theme, $isblank }) => $isblank == 'true' ? theme.COLORS.ORANGE : theme.COLORS.RED};
         font-size: 24px;

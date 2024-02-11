@@ -8,17 +8,35 @@ import { NoteItem } from '../../components/NoteItem';
 import { Button } from '../../components/Button';
 
 export function New(){
-    const links = [
-        {id: 1, name: 'https://www.rocketseat.com.br/'},
-        {id: 2, name: 'https://www.google.com.br/'}
-    ];
+    const note = {
+        links: [
+            {id: 1, name: 'https://www.rocketseat.com.br/'},
+            {id: 2, name: 'https://www.google.com.br/'}
+        ],
+        markers: [
+            {id: 1, name: 'React'},
+            {id: 2, name: 'NodeJS'},
+            {id: 3, name: 'Vite'},
+            {id: 4, name: 'RocketSeat'},        
+        ]        
+    };
 
-    const markers = [
-        {id: 1, name: 'React'},
-        {id: 2, name: 'NodeJS'},
-        {id: 3, name: 'Vite'},
-        {id: 4, name: 'RocketSeat'},        
-    ];
+    note.addLink = function(name){
+        note.links.push({id: note.links.length + 1, name});
+    };
+
+    note.addMarker = function(name){
+        note.markers.push({id: note.markers.length + 1, name});
+    };
+
+    note.removeLink = function(id){
+        note.links = note.links.filter(link => link.id != id);   
+        this.forceUpdate();  
+    };
+
+    note.removeMarker = function(id){
+        note.links = note.links.filter(marker => marker.id != id);
+    };
 
     return (               
         <Container>            
@@ -37,9 +55,9 @@ export function New(){
 
                     <Section title="Links úteis">
                         <InputContainer>
-                            {links.map(link => {
+                            {note.links.map(link => {
                                 return (
-                                    <NoteItem key={link.id} value={link.name} readOnly/>
+                                    <NoteItem key={link.id} value={link.name} />
                                 )
                             })}
                             <NoteItem placeholder="Novo Link" isBlank />
@@ -48,9 +66,9 @@ export function New(){
 
                     <Section title="Marcadores">
                         <MarkersContainer>
-                            {markers.map(marker => {
+                            {note.markers.map(marker => {
                                 return (
-                                    <NoteItem key={marker.id} value={marker.name} readOnly />
+                                    <NoteItem key={marker.id} value={marker.name} />
                                 )
                             })}   
                             <NoteItem placeholder="Novo Marcador" isBlank />   
