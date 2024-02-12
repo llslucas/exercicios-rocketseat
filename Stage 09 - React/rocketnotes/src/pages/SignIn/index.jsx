@@ -18,7 +18,7 @@ export function SignIn(){
                     <Button title="Entrar" />
                 </Form>
 
-                <ButtonText title="Criar conta" isActive />
+                <a href="/register"><ButtonText title="Criar conta" isActive /></a>
             </DataContainer>
 
             <ImgContainer />            

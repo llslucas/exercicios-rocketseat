@@ -90,8 +90,14 @@ export const NewNote = styled.button`
     };
 
     > svg{
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
         margin-right: 8px;
         font-size: 24px;
+    };
+
+    > a {
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+        text-decoration: none;
     };
 `;
     

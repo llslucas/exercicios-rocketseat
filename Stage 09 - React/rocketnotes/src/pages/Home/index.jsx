@@ -46,7 +46,7 @@ export function Home(){
 
             <NewNote>                
                 <MdAdd />
-                Criar Nota
+                <a href="/new">Criar Nota</a>
             </NewNote>   
 
             <Content>

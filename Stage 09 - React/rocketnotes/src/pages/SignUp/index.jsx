@@ -20,7 +20,7 @@ export function SignUp(){
                     <Button title="Cadastrar" />
                 </Form>
 
-                <ButtonText title="Voltar para o login" isActive />
+                <a href="/"><ButtonText title="Voltar para o login" isActive /></a>
             </DataContainer>
 
                       

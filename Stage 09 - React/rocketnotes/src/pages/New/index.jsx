@@ -45,7 +45,7 @@ export function New(){
                 <Form>
                     <Title>
                         <h1>Criar nota</h1>
-                        <ButtonText title="voltar" />
+                        <a href="/"><ButtonText title="voltar" /></a>
                     </Title>
 
                     <InputContainer>

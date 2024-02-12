@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const DataContainer = styled.div`
     display: grid;
     place-content: center;  
+    text-align: center;  
 `;
 
 export const ImgContainer = styled.div`
