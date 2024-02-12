@@ -5,6 +5,7 @@ import { Input } from '../../components/Input'
 import { Section } from '../../components/Section'
 import { Note } from '../../components/Note'
 import { MdAdd, MdSearch } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 export function Home(){
     const notas = [
@@ -44,10 +45,12 @@ export function Home(){
                 <Input placeholder="Pesquisar pelo titulo" icon={MdSearch} />
             </Search>            
 
-            <NewNote>                
+            
+            <NewNote to="/new">                
                 <MdAdd />
-                <a href="/new">Criar Nota</a>
+                Criar Nota
             </NewNote>   
+            
 
             <Content>
                 <Section title="Minhas Notas">

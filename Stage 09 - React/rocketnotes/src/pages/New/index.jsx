@@ -6,6 +6,7 @@ import { Input } from '../../components/Input';
 import { TextArea } from '../../components/TextArea';
 import { NoteItem } from '../../components/NoteItem';
 import { Button } from '../../components/Button';
+import { Link } from 'react-router-dom';
 
 export function New(){
     const note = {
@@ -45,7 +46,7 @@ export function New(){
                 <Form>
                     <Title>
                         <h1>Criar nota</h1>
-                        <a href="/"><ButtonText title="voltar" /></a>
+                        <Link to="/"><ButtonText title="voltar" /></Link>
                     </Title>
 
                     <InputContainer>

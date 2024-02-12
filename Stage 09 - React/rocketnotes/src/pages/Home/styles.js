@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -68,7 +70,7 @@ export const Content = styled.div`
     }
 `;
 
-export const NewNote = styled.button`
+export const NewNote = styled(Link)`
     grid-area: newnote;
 
     display: flex;
@@ -78,6 +80,8 @@ export const NewNote = styled.button`
 
     background: ${({ theme }) => theme.COLORS.ORANGE};
     border: none;
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    text-decoration: none;
     
     font-size: 20px;
 
@@ -89,15 +93,11 @@ export const NewNote = styled.button`
         filter: brightness(1.2);              
     };
 
-    > svg{
-        color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    > svg{        
         margin-right: 8px;
         font-size: 24px;
     };
 
-    > a {
-        color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-        text-decoration: none;
-    };
+   
 `;
     
