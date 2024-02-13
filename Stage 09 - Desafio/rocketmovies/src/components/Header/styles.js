@@ -35,7 +35,8 @@ export const User = styled.div`
             background: none;
             border: none;
             font-size: 1.4rem;
-            color: ${({ theme }) => theme.COLORS.GRAY_300};            
+            color: ${({ theme }) => theme.COLORS.GRAY_300};        
+            cursor: pointer;    
         }
     }
 
