@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { Container, User } from "./styles";
 import { Brand } from '../Brand';
 import { Input } from '../Input';
@@ -9,10 +11,14 @@ export function Header(){
             <Input placeholder='Pesquisar pelo titulo'/>
             <User>
                 <div>
-                    <h2>Lucas Souza</h2>
+                    <Link to="/profile">
+                        <h2>Lucas Souza</h2>
+                    </Link>
                     <button>sair</button>                    
                 </div>
-                <img src='https://github.com/llslucas115.png' />
+                <Link to="/profile">
+                    <img src='https://github.com/llslucas115.png' />
+                </Link>
             </User>
         </Container>        
     )
