@@ -1,5 +1,6 @@
-import { Container, Stars, Tags, Tag } from "./styles";
-import { MdOutlineStar, MdOutlineStarBorder } from 'react-icons/md'
+import { Container, Tags, Tag } from "./styles";
+import { Stars } from '../Stars';
+
 
 export function MovieNote({note}){
     return(
@@ -8,15 +9,7 @@ export function MovieNote({note}){
                 <h1>
                     {note.title}
                 </h1>
-                <Stars>
-                    {Array.from({length: 5}, (v, k) => k + 1).map(pos => {
-                        if(pos <= note.rating){
-                            return(<MdOutlineStar key={pos} />)
-                        }else{
-                            return(<MdOutlineStarBorder key={pos} />)
-                        }
-                    })}
-                </Stars>
+                <Stars rating={note.rating} size='1.4rem' />
             </div>
             <p>{note.description}</p>     
             <Tags>

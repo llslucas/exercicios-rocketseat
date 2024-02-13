@@ -26,18 +26,6 @@ export const Container = styled.section`
     }
 `;
 
-export const Stars = styled.div`
-    display: flex;
-    flex-direction: row;
-    gap: 0.6rem;
-
-    > svg {
-        width: 1.4rem;
-        height: 1.4rem;
-        margin-top: 0.8rem;
-        color: ${({ theme }) => theme.COLORS.ROSE};
-    }
-`
 export const Tags = styled.div`
     display: flex;
     flex-direction: row;
