@@ -21,4 +21,9 @@ export default createGlobalStyle`
     body, input, button, textarea {
         font-family: 'Roboto Slab', serif;
     }
+
+    a{
+        text-decoration: none;    
+        color: ${({ theme }) => theme.COLORS.WHITE};    
+    }
 `;
