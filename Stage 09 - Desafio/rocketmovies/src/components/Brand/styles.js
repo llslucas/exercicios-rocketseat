@@ -9,7 +9,6 @@ export const Container = styled.div`
 
     > h2 {
         color: ${({ theme }) => theme.COLORS.GRAY_200};
-        font-size: 1.4rem;
-        display: ${({ $subtitle }) => $subtitle ? 'block' : 'none'};
+        font-size: 1.4rem;        
     }
 `;
