@@ -12,8 +12,10 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     grid-area: 'content';
+    
     display: grid;
     place-content: center;
+    grid-template-columns: 34rem;
 
     gap: 4.8rem;
 

@@ -17,7 +17,7 @@ export function SignIn(){
                     <Input type='password' placeholder='Senha' icon={FiLock} />
                     <Button title="Entrar" />
                 </Form>
-                <ButtonText title='Criar Conta' to='#' />           
+                <ButtonText title='Criar Conta' to='/register' />           
             </Content>
             <Background />           
         </Container>
