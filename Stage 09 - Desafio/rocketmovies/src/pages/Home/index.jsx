@@ -4,6 +4,7 @@ import { Container, Content, Title, Notes } from './styles';
 import { Header } from '../../components/Header';
 import { Button } from '../../components/Button';
 import { MovieNote } from '../../components/MovieNote';
+import { Link } from 'react-router-dom';
 
 const notes = [
     {   
@@ -96,7 +97,9 @@ export function Home(){
             <Content>
                 <Title>
                     <h1>Meus filmes</h1>
-                    <Button title='Adicionar filme' icon={FiPlus} />
+                    <Link to="/create">
+                        <Button title='Adicionar filme' icon={FiPlus} />
+                    </Link>
                 </Title>
                 <Notes>
                     {notes.map(note => {
