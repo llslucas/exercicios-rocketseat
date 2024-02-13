@@ -9,8 +9,8 @@ export const Container =  styled.button`
     align-items: center;
     justify-content: center;
 
-    background-color: ${({ theme }) => theme.COLORS.ROSE};
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    background-color: ${({ theme, $inverted }) => !$inverted ? theme.COLORS.ROSE : theme.COLORS.BLACK};
+    color: ${({ theme, $inverted }) => !$inverted ? theme.COLORS.BACKGROUND_700 : theme.COLORS.ROSE};
     border: none;
     border-radius: 1rem;
     
