@@ -6,6 +6,7 @@ export default {
   
       WHITE: "#F4EDE8",
       ROSE: "#FF859B",
+      ROSE_100: "rgba(255, 133, 155, 0.05)",
   
       GRAY_100: "#E5E5E5",
       GRAY_200: "#CAC4CF",
