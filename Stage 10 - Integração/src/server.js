@@ -3,11 +3,13 @@ import AppError from './utils/AppError.js';
 import express from 'express';
 import routes from './routes/index.js';
 import migrationRun from './database/sqlite/migrations/index.js';
+import { UPLOADS_FOLDER } from './configs/upload.js';
 
 const app = express();
 
 app.use(express.json());
 
+app.use("/files", express.static(UPLOADS_FOLDER));
 app.use(routes);
 
 migrationRun();
