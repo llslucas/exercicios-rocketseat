@@ -12,8 +12,8 @@ export const Container = styled.div`
 
     > main{
         grid-area: "content";      
-        overflow-y: auto;
-    }
+        overflow-y: auto;         
+    }    
 `;
 
 export const Links = styled.ul`
@@ -34,18 +34,18 @@ export const Content = styled.div`
     margin: 0 auto;
 
     display: flex;
-    flex-direction: column;   
-
-    > button:first-child{
-        place-self: end;     
-        margin: 60px 0;   
-    }
+    flex-direction: column;       
 
     > h1{
         font-size: 36px; 
         font-weight: 500;
-    }
+    }  
 
+    > button{            
+            place-self: end; 
+            margin: 40px 0;   
+    }   
+    
     > p{
         text-align: justify;
         font-style: normal;

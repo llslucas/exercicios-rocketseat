@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;  
-
     display: flex;
     align-items: center;
-
     border-radius: 10px;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    &:has(input:autofill, input:-webkit-autofill){
+        background-color: rgb(232 240 254);
+        color: black;        
+    }
 
     >input {        
         background: transparent;
@@ -24,9 +27,17 @@ export const Container = styled.div`
             color: ${({ theme }) => theme.COLORS.GRAY_300};
         };
 
+        &:autofill{
+            border-radius: 10px;
+        }
+
+        &:-webkit-autofill{
+            border-radius: 10px;
+        }
+
         &:focus{
             outline: none;
-        }
+        }   
     }
 
     > svg {

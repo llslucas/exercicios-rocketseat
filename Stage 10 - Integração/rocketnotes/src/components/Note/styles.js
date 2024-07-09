@@ -9,6 +9,11 @@ export const Container = styled.div`
 
     padding: 16px 22px;
 
+    &:hover{
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+        cursor: pointer;
+    }
+
     > h1 {
         color: ${({ theme }) => theme.COLORS.WHITE};
         font-size: 24px;
@@ -35,5 +40,5 @@ export const Container = styled.div`
             background-color: ${({ theme }) => theme.COLORS.ORANGE};
             color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
         }
-    }
+    }    
 `;

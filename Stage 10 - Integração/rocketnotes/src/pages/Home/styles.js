@@ -14,7 +14,7 @@ export const Container = styled.div`
     "newnote content";
 
     grid-template-columns: 250px auto;
-    grid-template-rows: 105px 128px auto 64px;    
+    grid-template-rows: 106px 128px auto 64px;    
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 `;
@@ -28,7 +28,6 @@ export const Brand = styled.div`
     font-weight: 700;    
 
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
-
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
     > h2 {

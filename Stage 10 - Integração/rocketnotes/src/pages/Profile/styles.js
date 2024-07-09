@@ -28,15 +28,15 @@ export const DataContainer = styled.div`
 `;
 
 export const Form = styled.form`
-    width: 340px;
+    width: 340px;         
+`;
 
-    display: flex;
+export const InputGroup = styled.div`
+    display:flex;
     flex-direction: column;
-    gap: 8px;
-
-    :nth-child(3){
-        margin-top: 16px;
-    }
+    gap: 8px;    
+    
+    margin-bottom: 24px;
 `;
 
 export const AvatarContainer = styled.div`
@@ -50,6 +50,9 @@ export const AvatarContainer = styled.div`
     > img{                
         height: 100%;
         border-radius: 50%;
+        aspect-ratio: 1;    
+        object-fit: cover;    
+        object-position: top;
     }
 
     >input{
@@ -72,8 +75,7 @@ export const AvatarContainer = styled.div`
         cursor: pointer;
 
         svg{
-            font-size: 20px;   
-                     
+            font-size: 20px;                        
             color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
         }
     }

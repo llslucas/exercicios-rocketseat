@@ -41,11 +41,11 @@ export function SignUp(){
             <ImgContainer />  
             <DataContainer>
                 <Brand />   
-                <Form>  
+                <Form> 
                     <h2>Crie sua conta</h2>          
                     <Input icon={FiUser} placeholder="Nome" type="text" onChange={e => setName(e.target.value)} />        
                     <Input icon={FiMail} placeholder="E-mail" type="text" onChange={e => setEmail(e.target.value)} />
-                    <Input icon={FiLock} placeholder="Senha" type="password" onChange={e => setPassword(e.target.value)} />
+                    <Input icon={FiLock} placeholder="Senha" type="password" onChange={e => setPassword(e.target.value)} autoComplete="new-password" />
                     <Button title="Cadastrar" onClick={handleSignUp} />
                 </Form>
 

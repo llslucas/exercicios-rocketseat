@@ -27,8 +27,8 @@ export function SignIn(){
                 <Brand />   
                 <Form>  
                     <h2>Faça seu login</h2>                  
-                    <Input icon={FiMail} placeholder="E-mail" type="text" onChange={e => setEmail(e.target.value)} />
-                    <Input icon={FiLock} placeholder="Senha" type="password" onChange={e => setPassword(e.target.value)} />
+                    <Input icon={FiMail} placeholder="E-mail" type="text" onChange={e => setEmail(e.target.value)} autoComplete="email" />
+                    <Input icon={FiLock} placeholder="Senha" type="password" onChange={e => setPassword(e.target.value)} autoComplete="password" />
                     <Button title="Entrar" onClick={ handleSignIn } />
                 </Form>
 

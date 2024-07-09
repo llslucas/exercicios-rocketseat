@@ -27,7 +27,7 @@ export const InputContainer = styled.div`
     gap: 16px; 
 `;
 
-export const MarkersContainer = styled.div`     
+export const TagsContainer = styled.div`     
     display: flex;  
     flex-wrap: wrap;      
     gap: 16px;
@@ -40,4 +40,8 @@ export const Title = styled.div`
     align-items: center;
     
     margin-bottom: 20px;
+
+    button{
+        font-size: 18px;        
+    }
 `;

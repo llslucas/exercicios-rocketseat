@@ -1,4 +1,8 @@
-import { Container, Main, Form, Title, MarkersContainer, InputContainer } from './styles';
+import { useState } from 'react';
+import { api } from '../../services/api';
+import { useNavigate } from 'react-router-dom';
+
+import { Container, Main, Form, Title, TagsContainer, InputContainer } from './styles';
 import { Section } from '../../components/Section'
 import { Header } from '../../components/Header'
 import { ButtonText } from '../../components/ButtonText';
@@ -6,38 +10,84 @@ import { Input } from '../../components/Input';
 import { TextArea } from '../../components/TextArea';
 import { NoteItem } from '../../components/NoteItem';
 import { Button } from '../../components/Button';
-import { Link } from 'react-router-dom';
 
 export function New(){
-    const note = {
-        links: [
-            {id: 1, name: 'https://www.rocketseat.com.br/'},
-            {id: 2, name: 'https://www.google.com.br/'}
-        ],
-        markers: [
-            {id: 1, name: 'React'},
-            {id: 2, name: 'NodeJS'},
-            {id: 3, name: 'Vite'},
-            {id: 4, name: 'RocketSeat'},        
-        ]        
-    };
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
 
-    note.addLink = function(name){
-        note.links.push({id: note.links.length + 1, name});
-    };
+    const [links, setLinks] = useState([]);
+    const [newLink, setNewLink] = useState("");
 
-    note.addMarker = function(name){
-        note.markers.push({id: note.markers.length + 1, name});
-    };
+    const [tags, setTags] = useState([]);
+    const [newTag, setNewTag] = useState("");
 
-    note.removeLink = function(id){
-        note.links = note.links.filter(link => link.id != id);   
-        this.forceUpdate();  
-    };
+    const navigate = useNavigate();
 
-    note.removeMarker = function(id){
-        note.links = note.links.filter(marker => marker.id != id);
-    };
+    function handleAddLink(){      
+        const formattedLink = newLink.trim();
+        
+        if(formattedLink === ""){
+            alert("Você não pode adicionar um link em branco.");
+            setNewLink("");
+            return;
+        }
+
+        if(links.find(link => link === formattedLink)){
+            alert("O link já foi adicionado.");
+            setNewLink("");
+            return;
+        }
+
+        setLinks(prevState => [...prevState, formattedLink]);
+        setNewLink("");
+    }
+
+    function handleRemoveLink(deleted){
+        setLinks(prevState => prevState.filter(link => link !== deleted));
+    }
+
+    function handleAddTag(){      
+        const formattedTag = newTag.trim();
+        
+        if(formattedTag === ""){
+            alert("Você não pode adicionar um marcador em branco.");
+            setNewTag("");
+            return;
+        }
+
+        if(tags.find(tag => tag === formattedTag)){
+            alert("O marcador já foi adicionado.");
+            setNewTag("");
+            return;
+        }
+
+        setTags(prevState => [...prevState, formattedTag]);
+        setNewTag("");
+    }
+
+    function handleRemoveTag(deleted){
+        setTags(prevState => prevState.filter(link => link !== deleted));
+    }
+
+    async function handleSaveNote(){
+        const formattedTitle = title.trim();
+        const formattedDescription = description.trim();       
+        
+        if(!formattedTitle || formattedTitle === ""){
+            return alert("Informe o título.");
+        }
+        
+        await api.post("/notes", {
+            title: formattedTitle,
+            description: formattedDescription,
+            tags,
+            links
+        });
+
+        alert("Nota criada com sucesso!");
+
+        navigate(-1);
+    }
 
     return (               
         <Container>            
@@ -46,37 +96,74 @@ export function New(){
                 <Form>
                     <Title>
                         <h1>Criar nota</h1>
-                        <Link to="/"><ButtonText title="voltar" /></Link>
+                        <ButtonText 
+                            title="voltar"
+                            onClick={e => navigate(-1) }
+                        />
                     </Title>
 
                     <InputContainer>
-                        <Input type="text" placeholder="Título" />                    
-                        <TextArea placeholder="Observações" rows="5" />
+
+                        <Input                             
+                            type="text" 
+                            placeholder="Título" 
+                            onChange = {e => setTitle(e.target.value)}
+                        />    
+
+                        <TextArea 
+                            placeholder="Observações" 
+                            rows="5" 
+                            onChange = {e => setDescription(e.target.value)}
+                        />
                     </InputContainer>
 
                     <Section title="Links úteis">
                         <InputContainer>
-                            {note.links.map(link => {
+                            {links.map((link, index) => {
                                 return (
-                                    <NoteItem key={link.id} value={link.name} />
+                                    <NoteItem 
+                                        key={String(index)} 
+                                        value={link} 
+                                        onClick= {() => handleRemoveLink(link) }
+                                    />
                                 )
                             })}
-                            <NoteItem placeholder="Novo Link" isBlank />
+
+                            <NoteItem 
+                                placeholder="Novo Link" 
+                                isBlank 
+                                value= { newLink }
+                                onChange= { e => setNewLink(e.target.value) }
+                                onClick= { handleAddLink }
+                            />
                         </InputContainer>
                     </Section> 
 
                     <Section title="Marcadores">
-                        <MarkersContainer>
-                            {note.markers.map(marker => {
+                        <TagsContainer>
+                            {tags.map((tag, index) => {
                                 return (
-                                    <NoteItem key={marker.id} value={marker.name} />
+                                    <NoteItem 
+                                        key = {String(index)} 
+                                        value = {tag} 
+                                        onClick = { () => handleRemoveTag(tag) }
+                                    />
                                 )
                             })}   
-                            <NoteItem placeholder="Novo Marcador" isBlank />   
-                        </MarkersContainer>
+                            <NoteItem 
+                                value = { newTag }
+                                placeholder = "Novo Marcador" 
+                                isBlank 
+                                onChange = {e => setNewTag(e.target.value)}
+                                onClick = { handleAddTag }
+                            />   
+                        </TagsContainer>
                     </Section>        
 
-                    <Button title="Salvar" />
+                    <Button 
+                        title="Salvar" 
+                        onClick = { handleSaveNote }
+                    />
                 </Form>
             </Main>       
         </Container>
